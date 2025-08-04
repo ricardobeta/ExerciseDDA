@@ -1,0 +1,50 @@
+# ===============================================
+# Archivos y directorios generados por el Build
+# ===============================================
+# Directorio de salida de Maven
+target/
+
+# ==================================================
+# Archivos y directorios específicos de los IDEs
+# ==================================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+.nb-gradle/
+
+# VS Code
+.vscode/
+
+# =========================================
+# Archivos del sistema operativo y logs
+# =========================================
+# Archivos de logs
+*.log
+logs/
+
+# Archivos temporales
+*.tmp
+
+# Archivos del sistema operativo
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+
+# =================
+# Dependencias
+# =================
+# Evitar subir el JAR del Maven Wrapper
+.mvn/wrapper/maven-wrapper.jar
