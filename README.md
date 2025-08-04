@@ -80,8 +80,9 @@ Este script realizará las siguientes acciones:
 
 | Servicio           | URL                           |
 |--------------------|-------------------------------|
-| accounts-service   | http://localhost:8089         |
-| customers-service  | http://localhost:8088/api     |
+| accounts-service   | http://localhost:8089/api/accounts         |
+| accounts-service   | http://localhost:8089/api/transactions         |
+| customers-service  | http://localhost:8088/api/customers     |
 | PostgreSQL         | localhost:5432                |
 
 ---
