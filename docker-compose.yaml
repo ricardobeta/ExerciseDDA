@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: postgres:15
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: accounts
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./DataBase/init:/docker-entrypoint-initdb.d
+
+  accounts-service:
+    build:
+      context: ./accounts
+    container_name: accounts-service
+    depends_on:
+      - postgres-db
+    ports:
+      - "8089:8089"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5432/accounts
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: mysecretpassword
+      SPRING_APPLICATION_NAME: accounts
+      SERVER_PORT: 8089
+      SERVICES_CUSTOMER_URL: http://customers-service:8088/api
+
+  customers-service:
+    build:
+      context: ./customers
+    container_name: customers-service
+    depends_on:
+      - postgres-db
+    ports:
+      - "8088:8088"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5432/accounts
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: mysecretpassword
+      SPRING_APPLICATION_NAME: customers
+      SERVER_PORT: 8088
