@@ -15,7 +15,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8088/api/customers/1",
+							"raw": "http://localhost:8088/api/customers/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -24,7 +24,7 @@
 							"path": [
 								"api",
 								"customers",
-								"1"
+								"4"
 							]
 						}
 					},
@@ -132,7 +132,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"customerId\": 1,\r\n  \"password\": \"securePassword123\",\r\n  \"id\": 10,\r\n  \"name\": \"Juan Pérez\",\r\n  \"gender\": \"M\",\r\n  \"age\": 35,\r\n  \"identification\": \"0912345678\",\r\n  \"address\": \"Av. Calderon 742\",\r\n  \"telephone\": \"0987654321\"\r\n}\r\n",
+							"raw": "{\r\n  \"password\": \"securePassword123\",\r\n  \"name\": \"Mayte Carrera\",\r\n  \"gender\": \"F\",\r\n  \"age\": 30,\r\n  \"identification\": \"0912345679\",\r\n  \"address\": \"Av. Calderon 742\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -225,7 +225,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8088/api/customers/2",
+							"raw": "http://localhost:8088/api/customers/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -234,7 +234,7 @@
 							"path": [
 								"api",
 								"customers",
-								"2"
+								"4"
 							]
 						}
 					},
@@ -273,7 +273,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"accountNumber\": \"1234567896\",\r\n  \"accountType\": \"SAVINGS\",\r\n  \"initialBalance\": 1000.50,\r\n  \"customerId\": 3\r\n}",
+							"raw": "{\r\n  \"accountNumber\": \"1234567896\",\r\n  \"accountType\": \"SAVING\",\r\n  \"initialBalance\": 0,\r\n  \"customerId\": 4\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -302,7 +302,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n \"phone\": \"02222222\",\r\n \"status\": true\r\n}\r\n",
+							"raw": "{\r\n    \"status\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -379,7 +379,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"accountId\": 9,\r\n    \"transactionDate\":\"2025-08-01\",\r\n    \"transactionType\":\"WITHDRAWAL\",\r\n    \"amount\": \"-1900\"\r\n}",
+							"raw": "{\r\n    \"accountId\": 6,\r\n    \"transactionDate\":\"2025-08-05\",\r\n    \"transactionType\":\"WITHDRAWAL\",\r\n    \"amount\": -5000\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -457,7 +457,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8089/api/reports?customerId=3&startDate=2025-08-01&endDate=2025-08-03",
+							"raw": "http://localhost:8089/api/reports?customerId=4&startDate=2025-08-01&endDate=2025-08-05",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -470,7 +470,7 @@
 							"query": [
 								{
 									"key": "customerId",
-									"value": "3"
+									"value": "4"
 								},
 								{
 									"key": "startDate",
@@ -478,7 +478,7 @@
 								},
 								{
 									"key": "endDate",
-									"value": "2025-08-03"
+									"value": "2025-08-05"
 								}
 							]
 						}
